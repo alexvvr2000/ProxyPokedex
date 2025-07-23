@@ -6,5 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface TypeService {
     TypeDto getType(int id);
+
     Page<TypeDto> getPageType(Pageable pageable);
 }

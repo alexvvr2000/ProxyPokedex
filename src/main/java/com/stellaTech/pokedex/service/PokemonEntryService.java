@@ -6,5 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface PokemonEntryService {
     PokemonEntryDto getPokemonEntry(int id);
+
     Page<PokemonEntryDto> getPokemonEntryPage(Pageable pageable);
 }

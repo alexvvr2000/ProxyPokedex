@@ -6,5 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface StatisticService {
     StatisticDto getStatistic(int id);
+
     Page<StatisticDto> getPageStatistic(Pageable pageable);
 }
