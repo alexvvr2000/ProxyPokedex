@@ -1,0 +1,16 @@
+meta {
+  name: pokemon info
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://pokeapi.co/api/v2/pokemon/{{pokemon_id}}
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  let pokemon_id = Math.floor(Math.random() * 1000) + 1;
+  bru.setVar("pokemon_id", pokemon_id);
+}

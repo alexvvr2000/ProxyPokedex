@@ -1,0 +1,16 @@
+meta {
+  name: type info
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://pokeapi.co/api/v2/type/{{type_id}}
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  let type_id = Math.floor(Math.random() * 21) + 1;
+  bru.setVar("type_id", type_id);
+}

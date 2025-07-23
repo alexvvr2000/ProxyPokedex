@@ -1,0 +1,16 @@
+meta {
+  name: stat info
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://pokeapi.co/api/v2/stat/{{stat_id}}
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  let stat_id = Math.floor(Math.random() * 8) + 1;
+  bru.setVar("stat_id", stat_id);
+}
